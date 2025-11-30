@@ -1,0 +1,28 @@
+@import "tailwindcss";
+
+/* Custom Colors */
+.fill-red {
+  background-color: #EB4E62;
+}
+
+.fill-cream {
+  background-color: #FFFAF1;
+}
+
+/* Smooth Scroll Behavior */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Primary font (DM Sans) is applied globally via layout.tsx */
+body {
+  font-family: var(--font-dm-sans), sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Optional: you can define secondary font utility for Playfair Display */
+.font-secondary {
+  font-family: var(--font-playfair), serif;
+}
+
