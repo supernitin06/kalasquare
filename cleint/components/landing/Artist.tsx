@@ -63,7 +63,7 @@ export const artists = [
 
 export default function Artist() {
   return (
-    <div className=" flex justify-center max-w-7xl  items-center flex-col">
+    <div className=" flex justify-center max-w-7xl items-center flex-col">
 
       <FormatPage
         badge="Stars Of Tomorrow "
@@ -73,7 +73,7 @@ export default function Artist() {
         headingwidth="max-w-[544px]"
       />
 
-      <div className="flex justify-around flex-wrap gap-y-7">
+      <div className="flex md:justify-between px-5 md:px-0 justify-center  flex-wrap gap-y-7">
         {artists.map((item) => (
           <ArtistCard
             key={item.id}

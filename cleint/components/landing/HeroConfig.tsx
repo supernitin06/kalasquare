@@ -8,7 +8,7 @@ export default function HeroConfig() {
   const sectionRef = useRef<HTMLDivElement>(null);
 
   return (
-    <section id="home" ref={sectionRef} className="relative py-10 ">
+    <section id="home" ref={sectionRef} className="relative md:py-10 ">
       <HeroBanner
         image="images/hero.png"
         title="India's Next Voice — India's Largest Digital Singing Talent Hunt"

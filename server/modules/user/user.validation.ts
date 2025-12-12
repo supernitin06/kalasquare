@@ -16,7 +16,10 @@ export const createUserSchema = z.object({
 
   age: z.number().min(10, "Age is less"),
 
-  videoLink: z.string().url("Invalid video link URL").optional(),
+  videoLink: z
+    .union([z.string().url("Invalid video link URL"), z.literal("")])
+    .optional()
+    .transform((val) => (val === "" ? undefined : val)),
 
   // status is not required in create request -> default false in DB
   status: z.boolean().optional(),
@@ -34,5 +37,7 @@ export const validateUser = (
     return res.status(400).json({ error: message });
   }
 
+  // Use the transformed data (e.g., empty strings converted to undefined)
+  req.body = result.data;
   next();
 };

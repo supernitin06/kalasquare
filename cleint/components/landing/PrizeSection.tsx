@@ -4,7 +4,7 @@ import FormatPage from "../shared/Formatedpage";
 
 export default function PrizeSection() {
     return (
-        <div className=" flex justify-center max-w-7xl  items-center flex-col">
+        <div className=" flex justify-center max-w-7xl mt-10 md:mt-0  items-center flex-col">
             <FormatPage
                 badge="Awards"
                 heading=""
@@ -12,7 +12,7 @@ export default function PrizeSection() {
                 description="Celebrate talent with tier-based rewards designed to elevate artists at every level—offering visibility, opportunities, and exclusive benefits for top performers."
                 headingwidth="max-w-[644px]"
             />
-            <div className="flex  justify-between mt-10 w-full gap-3">
+            <div className="flex md:flex-row flex-col justify-center items-center   md:justify-between mt-10 w-full gap-3">
 
                 {/* Card 1 – Top 10 */}
                 <PrizeCard
@@ -28,7 +28,7 @@ export default function PrizeSection() {
                 />
 
                 {/* ⭐ Center Card – 3D Effect */}
-                <div className="transform scale-105 -translate-y-3 shadow-2xl shadow-red-300/40 rounded-2xl">
+                <div className="md:transform md:scale-105 md:-translate-y-3 shadow-2xl shadow-red-300/40 rounded-2xl">
                     <PrizeCard
                         icon={<Trophy className="max-w-14 max-h-14 text-white" />}
                         title="Winner"

@@ -37,3 +37,24 @@ model Admin {
   role      Role     @default(ADMIN)
   createdAt DateTime @default(now())
 }
+
+model Song {
+  id        Int      @id @default(autoincrement())
+  name      String?
+  songLink  String
+  views     String
+  image     String?
+  // isActive  Boolean  @default(true)
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+}
+
+
+model Artist {
+  id         Int      @id @default(autoincrement())
+  name       String?
+  artistLink String
+  image      String?
+  createdAt  DateTime @default(now())
+  updatedAt  DateTime @updatedAt
+}

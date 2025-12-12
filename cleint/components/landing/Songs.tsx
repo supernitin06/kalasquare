@@ -54,7 +54,7 @@ export const Songs = () => {
   const sectionRef = useRef<HTMLDivElement>(null);
 
   return (
-    <section id="songs" ref={sectionRef} className="relative py-20 ">
+    <section id="songs" ref={sectionRef} className="relative py-20 max-w-7xl w-full ">
       <div className="flex justify-center max-w-6xl items-center flex-col mx-auto">
 
       <FormatPage
@@ -66,7 +66,7 @@ export const Songs = () => {
       />
 
       {/* Cards Section */}
-      <div className="flex justify-center md:justify-around flex-wrap gap-7 w-full mt-1">
+      <div className="flex justify-center md:justify-between  flex-wrap gap-7 w-full mt-1">
         {Songsdata.map((item) => (
           <SongCard
             key={item.id}

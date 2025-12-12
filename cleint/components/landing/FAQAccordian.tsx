@@ -56,7 +56,7 @@ const FAQAccordion = () => {
     };
 
     return (
-        <div className="w-full max-w-6xl mx-auto grid md:grid-cols-2 gap-4 mt-10">
+        <div className="w-full max-w-7xl mx-auto grid md:grid-cols-2 gap-4 px-5 md:px-0 mt-10">
 
 
 

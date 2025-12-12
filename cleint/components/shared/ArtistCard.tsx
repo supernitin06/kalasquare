@@ -11,7 +11,7 @@ interface Props {
 
 export default function ArtistCard({ image, name, text, location }: Props) {
     return (
-        <div className="border w-[260px] h-[380px] hover:bg-[#FFFAF1] border-[#EB4E62] rounded-2xl pb-3 bg-white shadow-sm hover:shadow-md transition max-w-[261px]">
+        <div className="border md:w-[260px] w-full h-[400px] md:h-[380px] hover:bg-[#FFFAF1] border-[#EB4E62] rounded-2xl pb-3 bg-white shadow-sm hover:shadow-md transition md:max-w-[261px]">
 
             {/* Image wrapper */}
             <div className="relative w-full h-[65%]   rounded-xl overflow-hidden">

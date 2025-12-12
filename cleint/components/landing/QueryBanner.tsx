@@ -42,7 +42,7 @@ const QueryBanner = () => {
 
     return (
         <div className='relative w-full flex justify-center   h-auto  '>
-            <div className='relative w-full max-w-7xl  h-auto'>
+            <div className='relative w-full   h-auto'>
                 {/* Background Image Container */}
                 <div className="absolute inset-0 z-0  h-auto ">
                     <Image
@@ -93,7 +93,7 @@ const QueryBanner = () => {
                                 </div>
                             ))}
                         </div>
-                        <div className=' max-w-[750px]  space-y-6'>
+                        <div className=' md:max-w-[750px]  space-y-6'>
 
                             <RegistrationForm />
                         </div>

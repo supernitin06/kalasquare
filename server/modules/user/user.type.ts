@@ -5,7 +5,7 @@ export interface CreateUserDTO {
   callingNumber: string;
   city: string;
   gender: string;
-  age: Number;
+  age: number;
   videoLink?: string | null;
   status?: boolean; // optional → default handled by Prisma
 }

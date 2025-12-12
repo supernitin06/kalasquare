@@ -27,7 +27,7 @@ export default function FormatPage({
     children, // 👈 USE CHILDREN
 }: FormatPageProps) {
     return (
-        <div className={`w-full flex flex-col  justify-center items-center mt-10  max-w-7xl mx-auto px-4 ${className}`}>
+        <div className={`w-full flex flex-col  justify-center items-center md:mt-10  max-w-7xl mx-auto px-4 ${className}`}>
             <div className="flex flex-col items-center w-full">
 
                 {/* Badge */}

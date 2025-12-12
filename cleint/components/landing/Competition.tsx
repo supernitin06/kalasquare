@@ -35,7 +35,7 @@ export default function Competition() {
 
 
             <div className="w-full ">
-                <div className="w-full flex flex-col gap-5  items-center overflow-hidden">
+                <div className="w-full flex flex-col gap-5 px-5 md:px-0  items-center overflow-hidden">
                     <div className="w-full grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3">
                         <FeatureCard
                             icon={<FaHeadphones />}

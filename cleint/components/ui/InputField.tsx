@@ -19,7 +19,7 @@ export default function InputField({
   className = "",
 }: InputFieldProps) {
   return (
-    <div className={className} >
+    <div className={` w-full  ${className}`}  >
       <label className="text-[clamp(15px,3vw,10px)]  font-medium">{label}</label>
 
       <input

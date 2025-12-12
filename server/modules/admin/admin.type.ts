@@ -1,7 +1,10 @@
 export interface CreateAdminDTO {
-    id: number;
     email: string;
     password: string;
-    role: 'SUPER_ADMIN' | 'ADMIN';
-    createdAt: Date;
+    role?: 'SUPER_ADMIN' | 'ADMIN';
+}
+
+export interface LoginAdminDTO {
+    email: string;
+    password: string;
 }

@@ -58,58 +58,61 @@ const Testimonial = () => {
 
     return (
         <>
-            <section id="testimonials" ref={sectionRef} className="relative py-20 overflow-hidden">
-                <div 
+            <section id="testimonials" ref={sectionRef} className="relative  max-w-7xl w-full py-20 overflow-x-hidden overflow-y-visible">
+                <div
                     ref={parallaxRef}
-                    className="absolute inset-0 -top-[20%] h-[140%] w-full opacity-20 bg-cover bg-center bg-no-repeat will-change-transform transition-transform duration-100 ease-out"
+                    className="absolute inset-0 -top-[20%] h-[140%] w-screen max-w-full opacity-20 bg-cover bg-center bg-no-repeat will-change-transform transition-transform duration-100 ease-out pointer-events-none"
                     style={{
                         backgroundImage: 'url(/images/t1.jpg)',
                     }}
                 />
-                <div className="relative z-10 flex justify-center max-w-6xl items-center flex-col mx-auto">
-                <FormatPage
-                    badge="Voice Thats Inspire"
-                    heading=" "
-                    highlight="What Our Artists Say"
-                    description="Real experiences from artists who trusted our platform to level up their music career and unlock new opportunities."
-                    headingwidth="max-w-[544px]"
-                />
-                <Swiper
-                    modules={[Navigation, Autoplay]}
-                    navigation={{ nextEl: ".next-btn", prevEl: ".prev-btn" }}
-                    autoplay={{ delay: 2000, disableOnInteraction: false }}
-                    grabCursor={true}
-                    spaceBetween={20}
-                    breakpoints={{
-                        320: { slidesPerView: 1, spaceBetween: 10 },
-                        640: { slidesPerView: 1, spaceBetween: 15 },
-                        768: { slidesPerView: 1, spaceBetween: 20 },
-                        1024: { slidesPerView: 2, spaceBetween: 20 },
-                        1280: { slidesPerView: 2, spaceBetween: 20 },
-                    }}
-                    className="w-full px-2 md:px-0 items-center max-w-6xl bg-red-700 h-auto justify-center"
-                >
-                    {test.map((data, i) => (
-                        <SwiperSlide key={i} className="">
-                            <TestimonialCard
-                                image={data.image}
-                                name={data.name}
-                                testimonial={data.testimonial}
-                                rating={data.rating}
-                            />
-                        </SwiperSlide>
-                    ))}
-                </Swiper>
+                <div className="relative z-10 flex justify-center max-w-7xl items-center flex-col mx-auto px-4 w-full min-w-0">
+                    <FormatPage
+                        badge="Voice Thats Inspire"
+                        heading=" "
+                        highlight="What Our Artists Say"
+                        description="Real experiences from artists who trusted our platform to level up their music career and unlock new opportunities."
+                        headingwidth="max-w-[544px]"
+                    />
+                    <div className="w-full min-h-[161px] relative max-w-7xl mx-auto flex justify-center items-center py-4 overflow-x-hidden min-w-0">
 
-                {/* Navigation Buttons */}
-                <div className="flex justify-center mt-4">
-                    <button className="hidden md:block prev-btn mr-3 bg-[#EB4E62] text-white px-3 py-3 rounded-full z-10 hover:bg-orange-600 transition-colors text-sm">
-                        <GrPrevious />
-                    </button>
-                    <button className="hidden md:block next-btn bg-[#EB4E62] text-white px-3 py-3 rounded-full z-10 hover:bg-orange-600 transition-colors text-sm">
-                        <GrNext />
-                    </button>
-                </div>
+                        <Swiper
+                            modules={[Navigation, Autoplay]}
+                            navigation={{ nextEl: ".next-btn", prevEl: ".prev-btn" }}
+                            autoplay={{ delay: 2000, disableOnInteraction: false }}
+                            grabCursor={true}
+                            spaceBetween={20}
+                            loop={true}
+                           breakpoints={{
+                            320: { slidesPerView: 1, spaceBetween: 10 },
+                            640: { slidesPerView: 1, spaceBetween: 15 },
+                            768: { slidesPerView: 2, spaceBetween: 20 },
+                            1024: { slidesPerView: 2, spaceBetween: 20 }
+                        }}
+                            className="w-full overflow-hidden items-center max-w-7xl h-auto justify-center min-w-0"
+                        >
+                            {test.map((data, i) => (
+                                <SwiperSlide key={i} className="">
+                                    <TestimonialCard
+                                        image={data.image}
+                                        name={data.name}
+                                        testimonial={data.testimonial}
+                                        rating={data.rating}
+                                    />
+                                </SwiperSlide>
+                            ))}
+                        </Swiper>
+
+                    </div>
+                    {/* Navigation Buttons */}
+                    <div className="flex justify-center mt-4">
+                        <button className="hidden md:block prev-btn mr-3 bg-[#EB4E62] text-white px-3 py-3 rounded-full z-10 hover:bg-orange-600 transition-colors text-sm">
+                            <GrPrevious />
+                        </button>
+                        <button className="hidden md:block next-btn bg-[#EB4E62] text-white px-3 py-3 rounded-full z-10 hover:bg-orange-600 transition-colors text-sm">
+                            <GrNext />
+                        </button>
+                    </div>
                 </div>
             </section>
         </>

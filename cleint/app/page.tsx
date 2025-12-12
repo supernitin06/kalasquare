@@ -1,6 +1,7 @@
 import Artist from '@/components/landing/Artist'
 import CompanyCarousel from '@/components/landing/CompanyCrousal'
 import Competition from '@/components/landing/Competition'
+import Devider from '@/components/landing/Devider'
 import { FAQ } from '@/components/landing/FAQ'
 import HeroConfig from '@/components/landing/HeroConfig'
 import Judge from '@/components/landing/Judge'
@@ -14,23 +15,23 @@ import React from 'react'
 const page = () => {
   return (
     <div className="w-full flex flex-col  justify-center items-center">
-      <div className="w-full max-w-7xl flex flex-col gap-16 md:gap-20">
+      <div className="w-full max-w-7xl flex flex-col gap-20 md:gap-20">
         <HeroConfig />
+        <Devider/>
         <QueryBanner />
         <Judge />
       </div>
       <Competition />
       <Songs />
 
-      <div className="w-full max-w-7xl flex flex-col gap-16 md:gap-20">
+      <div className="w-full max-w-7xl flex flex-col gap-20 md:gap-20">
         <Artist />
         <PrizeSection />
         <MentorshipSection />
       </div>
-      {/* <CompanyCarousel /> */}
-      {/* 
+      <CompanyCarousel />
       <Testimonial />
-      <FAQ /> */}
+       <FAQ /> 
     </div>
   )
 }

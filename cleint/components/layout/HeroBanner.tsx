@@ -30,7 +30,7 @@ const HeroBanner: React.FC<HeroBannerProps> = ({
 }) => {
   return (
     <div className="w-full flex justify-center ">
-      <div className="relative mt-[86px] h-[675px] w-full max-w-7xl rounded-3xl overflow-hidden shadow-xl">
+      <div className="relative mt-[86px] h-[675px] w-full max-w-7xl md:rounded-3xl overflow-hidden shadow-xl">
 
         {/* Background Image */}
         <div className="absolute inset-0">

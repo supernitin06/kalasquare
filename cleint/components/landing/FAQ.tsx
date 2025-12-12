@@ -5,7 +5,7 @@ import FormatPage from '../shared/Formatedpage'
 export const FAQ = () => {
     return (
         <>
-            <div className=" flex justify-center max-w-6xl items-center flex-col">
+            <div className=" flex justify-center w-full max-w-7xl items-center flex-col">
                 <FormatPage
                     badge=""
                     heading=" "

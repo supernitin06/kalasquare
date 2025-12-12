@@ -134,7 +134,7 @@ const MentorshipSection = () => {
 
         <div className="flex flex-col lg:flex-row justify-between w-full gap-8 lg:gap-20">
           {/* Left Image */}
-          <div className="w-full lg:w-1/2 flex h-[400px] lg:h-[560px] justify-center items-center rounded-xl overflow-hidden min-w-0">
+          <div className="w-full lg:w-1/2 px-5 md:px-0 flex h-[400px] lg:h-[560px] justify-center items-center rounded-xl overflow-hidden min-w-0">
             <img
               src="/images/i4.jpg"
               alt="Mentorship"
@@ -143,7 +143,7 @@ const MentorshipSection = () => {
           </div>
 
           {/* Right Items */}
-          <div className="w-full lg:w-1/2 flex flex-col gap-4 min-w-0">
+          <div className="w-full lg:w-1/2 flex flex-col pr-10 md:px-0 ml-8 gap-4 min-w-0">
             {detail.map((item, i) => {
               const IconComponent = IconMapper[item.icon];
 

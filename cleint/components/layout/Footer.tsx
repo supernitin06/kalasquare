@@ -12,7 +12,7 @@ export default function Footer() {
         {/* Logo */}
         <div className="flex justify-center mb-4">
           <Image
-            src="/logo.png"     // change to your logo path
+            src="/images/logo1.png"     // change to your logo path
             alt="KalaSquare Logo"
             width={160}
             height={50}
@@ -27,7 +27,7 @@ export default function Footer() {
         </p>
 
         {/* Stats */}
-        <div className="grid grid-cols-1 sm:grid-cols-3 gap-10 mb-14">
+        <div className="flex">
           {/* 1 */}
           <div className="flex flex-col items-center text-gray-300">
             <Music size={40} />
@@ -54,7 +54,7 @@ export default function Footer() {
         </div>
 
         {/* Social Icons */}
-        <div className="flex justify-center gap-6 mb-10">
+        <div className="flex justify-center gap-6 mt-20 ml-10 mb-10">
           <Link href="#"><div className="w-10 h-10 rounded-full bg-[#E74C3C] flex items-center justify-center">  
             <i className="fa-brands fa-youtube text-white" />
           </div></Link>
