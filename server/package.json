@@ -4,8 +4,11 @@
   "description": "",
  "main": "dist/index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "nodemon "
+    "build": "tsc",
+    "start": "node dist/index.js",
+    "dev": "nodemon --exec tsx index.ts",
+    "generate": "prisma generate",
+    "postinstall": "prisma generate"
   },
   "keywords": [],
   "author": "",
