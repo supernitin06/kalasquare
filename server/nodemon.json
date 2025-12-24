@@ -1,7 +1,8 @@
 {
-  "watch": ["*.ts", "**/*.ts"],
+  "watch": [
+    "*.ts",
+    "modules/**/*.ts"
+  ],
   "ext": "ts",
-  "exec": "tsx",
-  "ignore": ["node_modules", "dist"]
+  "exec": "ts-node-esm index.ts"
 }
-

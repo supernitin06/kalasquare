@@ -6,6 +6,7 @@ generator client {
 
 datasource db {
   provider = "postgresql"
+  url      = env("DATABASE_URL")
 }
 
 enum Role {
@@ -41,11 +42,14 @@ model Song {
   id        Int      @id @default(autoincrement())
   name      String?
   songLink  String
-  views     String
+  views     Int      @default(0)
   image     String?
   // isActive  Boolean  @default(true)
   createdAt DateTime @default(now())
   updatedAt DateTime @updatedAt
+
+  artist   Artist? @relation(fields: [artistId], references: [id])
+  artistId Int?
 }
 
 
@@ -56,4 +60,6 @@ model Artist {
   image      String?
   createdAt  DateTime @default(now())
   updatedAt  DateTime @updatedAt
+
+  songs Song[]
 }
