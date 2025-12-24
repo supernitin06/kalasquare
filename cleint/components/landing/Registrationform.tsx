@@ -42,9 +42,8 @@ export default function RegistrationForm() {
             if (data.file && data.file.trim() !== "") {
                 payload.videoLink = data.file.trim();
             }
-
             const response = await axios.post(
-                "http://localhost:8000/api/user/register",
+                "http://35.154.24.176:5000/api/user/register",
                 payload
             );
 
